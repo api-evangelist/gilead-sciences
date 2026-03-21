@@ -1,0 +1,7 @@
+aid: gilead-sciences
+url: https://raw.githubusercontent.com/api-evangelist/gilead-sciences/refs/heads/main/apis.yml
+modified: '2026-03-21'
+apis: []
+common:
+  - type: Website
+    url: https://www.gilead-sciences.com
