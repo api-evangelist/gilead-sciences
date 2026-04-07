@@ -1,7 +1,12 @@
 aid: gilead-sciences
-url: https://raw.githubusercontent.com/api-evangelist/gilead-sciences/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/gilead-sciences/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.gilead-sciences.com
+description: >-
+  Gilead Sciences is a research-based biopharmaceutical company that discovers, develops,
+  and commercializes innovative therapeutics in areas of unmet medical need including
+  HIV, viral hepatitis, oncology, and inflammatory diseases.
