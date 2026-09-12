@@ -30,12 +30,15 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gilead-sciences.png
 access: 3rd-Party
 created: '2026-03-21'
-modified: '2026-04-28'
+modified: '2026-09-12'
 position: Consuming
 tags:
   - Pharmaceuticals
   - Biotechnology
   - Healthcare
+  - Life Sciences
+  - Clinical Trials
+  - Open Source
   - Fortune 500
 url: >-
   https://raw.githubusercontent.com/api-evangelist/gilead-sciences/refs/heads/main/apis.yml
@@ -48,6 +51,42 @@ common:
     url: https://www.linkedin.com/company/gilead-sciences
   - type: Website
     url: https://www.gilead.com
+  - type: Packages
+    url: packages/gilead-sciences-packages.yml
+  - type: LLMsTxt
+    url: llms/gilead-sciences-llms.txt
+  - type: GitHubOrganization
+    url: https://github.com/Gilead-Public
+  - type: TermsOfService
+    url: https://www.gilead.com/terms-of-use
+  - type: PrivacyPolicy
+    url: https://www.gilead.com/privacy-statements
+  - type: Support
+    url: https://www.gilead.com/contact-us
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-12'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Gilead ships real first-party open-source software — 19 public repos under github.com/Gilead-Public,
+    the Apache-2.0 "gsm" R suite for risk-based clinical trial monitoring — but no public API: the only
+    host that resolves as an API surface, api.gilead.com, answers HTTP 200 with the same 321-byte
+    "Resource not Found" page for every path including a random one that cannot exist, and
+    developer.gilead.com / developers.gilead.com / apis.gilead.com do not resolve at all.
+  evidence:
+    - url: https://api.gilead.com/openapi.json
+      status: 200
+    - url: https://api.gilead.com/.well-known/gilead-sciences-negative-control-7f3ab91c.json
+      status: 200
+    - url: https://www.gilead.com/.well-known/api-catalog
+      status: 404
+    - url: https://www.gilead.com/llms.txt
+      status: 404
+  checked: '2026-09-12'

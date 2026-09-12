@@ -1,0 +1,221 @@
+generated: '2026-09-12'
+method: probed
+source: live HTTPS probes of the named /.well-known/ path list, 2026-09-12
+note: "Gilead Sciences serves no /.well-known/ discovery document on any host the record knows. api.gilead.com\
+  \ resolves (192.156.236.223) but is a catch-all that answers HTTP 200 with an identical 321-byte 'Resource\
+  \ not Found' HTML page for EVERY path, including a random negative-control path that cannot exist \u2014\
+  \ so none of its 200s is a document. developer.gilead.com and developers.gilead.com do not resolve in\
+  \ DNS. hit_count is 0 on every host, so NO WellKnown and NO SecurityTxt pointer is emitted: this file\
+  \ records a verified absence, not a surface."
+hosts:
+- host: https://www.gilead.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  hit_count: 0
+  soft_404_control:
+    path: /.well-known/gilead-sciences-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 80007
+    result: passed
+- host: https://gilead.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  hit_count: 0
+  soft_404_control:
+    path: /.well-known/gilead-sciences-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 80007
+    result: passed
+- host: https://api.gilead.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  - path: /.well-known/ucp.json
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  - path: /.well-known/acp.json
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  - path: /.well-known/apis.json
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  - path: /apis.json
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  - path: /apis.yml
+    status: 200
+    file: null
+    note: "200 returns the host's generic 'Resource not Found' HTML page, not a document \u2014 treated\
+      \ as a miss"
+  hit_count: 0
+  soft_404_control:
+    path: /.well-known/gilead-sciences-negative-control-7f3ab91c.json
+    status: 200
+    bytes: 321
+    result: "failed \u2014 host answers 200 for a path that cannot exist; every 200 on this host is discarded"
+  path_echo_control: failed
+- host: https://gilead-biostats.github.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  hit_count: 0
+  soft_404_control:
+    path: /.well-known/gilead-sciences-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 9115
+    result: passed
+hosts_not_resolving:
+- host: developer.gilead.com
+  result: NXDOMAIN
+- host: developers.gilead.com
+  result: NXDOMAIN
+- host: apis.gilead.com
+  result: NXDOMAIN
+- host: portal.gilead.com
+  result: NXDOMAIN
+hit_count: 0

@@ -1,0 +1,216 @@
+generated: '2026-09-12'
+method: searched
+source: >-
+  https://github.com/Gilead-Public and https://github.com/Gilead-BioStats — GitHub REST API
+  (/repos, /releases/latest) plus each repo's DESCRIPTION / package.json, fetched 2026-09-12.
+note: >-
+  Gilead Sciences publishes no public API and therefore ships no API client libraries. What it DOES
+  publish is a first-party open-source software estate: the "Good Statistical Monitoring" (gsm) suite
+  of R packages for risk-based quality management of clinical trials, plus supporting visualization,
+  data-simulation and QC tooling. These are research/analysis libraries, NOT SDKs for a Gilead API,
+  so this file carries a `Packages` pointer only — no `SDKs` pointer is emitted, because emitting one
+  would credit Gilead with an SDK count for an API that does not exist.
+registries_probed:
+  - registry: npm
+    result: no first-party Gilead package found (gsm.viz is GitHub/CDN-distributed, not published to npm)
+  - registry: pypi
+    result: no first-party Gilead package found (Open-SMART-PMI is GitHub-only)
+  - registry: cran
+    result: >-
+      none of the gsm suite is on CRAN — every gsm/gsm.* and clindata page under
+      cran.r-project.org/package= returns 404. Distribution is via GitHub (remotes/pak install).
+  - registry: rubygems
+    result: not found
+  - registry: crates.io
+    result: not found
+  - registry: nuget
+    result: not found
+  - registry: maven-central
+    result: not found
+  - registry: pkg.go.dev
+    result: not found
+github_organizations:
+  - org: Gilead-Public
+    url: https://github.com/Gilead-Public
+    bio: Organization to host only public repositories with explicit approvals from Enterprise Owners
+    public_repos: 19
+    created: '2025-10-15'
+  - org: Gilead-BioStats
+    url: https://github.com/Gilead-BioStats
+    public_repos: 5
+    created: '2020-04-23'
+packages:
+  - language: r
+    registry: github
+    name: gsm
+    url: https://github.com/Gilead-Public/gsm
+    install: remotes::install_github("Gilead-Public/gsm")
+    official: true
+    sdk: false
+    version: 2.2.5
+    published: '2026-07-27'
+    license: Apache-2.0
+    description: Good Statistical Monitoring — meta-package for the gsm RBQM suite.
+  - language: r
+    registry: github
+    name: gsm.core
+    url: https://github.com/Gilead-Public/gsm.core
+    install: remotes::install_github("Gilead-Public/gsm.core")
+    official: true
+    sdk: false
+    version: 1.3.1
+    published: '2026-08-11'
+    license: Apache-2.0
+    description: Analytics framework for constructing metrics and running gsm workflows.
+  - language: r
+    registry: github
+    name: gsm.mapping
+    url: https://github.com/Gilead-Public/gsm.mapping
+    install: remotes::install_github("Gilead-Public/gsm.mapping")
+    official: true
+    sdk: false
+    version: 1.1.6
+    published: '2026-08-12'
+    license: Apache-2.0
+    description: Data mapping framework for gsm.
+  - language: r
+    registry: github
+    name: gsm.kri
+    url: https://github.com/Gilead-Public/gsm.kri
+    install: remotes::install_github("Gilead-Public/gsm.kri")
+    official: true
+    sdk: false
+    version: 1.7.0
+    published: '2026-09-11'
+    license: Apache-2.0
+    description: Workflows to generate key risk indicators and visualize/report on them.
+  - language: r
+    registry: github
+    name: gsm.reporting
+    url: https://github.com/Gilead-Public/gsm.reporting
+    install: remotes::install_github("Gilead-Public/gsm.reporting")
+    official: true
+    sdk: false
+    version: 1.1.7
+    published: '2026-08-12'
+    license: Apache-2.0
+    description: Workflows to generate the reporting data model behind gsm reports.
+  - language: r
+    registry: github
+    name: gsm.datasim
+    url: https://github.com/Gilead-Public/gsm.datasim
+    install: remotes::install_github("Gilead-Public/gsm.datasim")
+    official: true
+    sdk: false
+    version: 2.0.0
+    published: '2026-07-17'
+    license: Apache-2.0
+    description: Generates synthetic clinical trial test data for RBQM.
+  - language: r
+    registry: github
+    name: gsm.utils
+    url: https://github.com/Gilead-Public/gsm.utils
+    install: remotes::install_github("Gilead-Public/gsm.utils")
+    official: true
+    sdk: false
+    version: 0.4.0
+    published: '2026-05-28'
+    license: Apache-2.0
+    description: Developer tooling for the OpenRBQM ecosystem.
+  - language: r
+    registry: github
+    name: gsm.vizr
+    url: https://github.com/Gilead-Public/gsm.vizr
+    install: remotes::install_github("Gilead-Public/gsm.vizr")
+    official: true
+    sdk: false
+    version: 0.1.0
+    published: '2026-08-27'
+    license: Apache-2.0
+    description: R bindings for the gsm.viz JavaScript visualization library.
+  - language: javascript
+    registry: github
+    name: gsm.viz
+    url: https://github.com/Gilead-Public/gsm.viz
+    install: 'npm install github:Gilead-Public/gsm.viz'
+    official: true
+    sdk: false
+    version: 2.4.1
+    published: '2026-08-07'
+    license: Apache-2.0
+    description: >-
+      Web-based data visualization for risk-based monitoring. package.json declares name "gsm.viz"
+      version 2.4.1 but the package is NOT published to npm (registry.npmjs.org/gsm.viz -> 404);
+      consumers install from the GitHub tag.
+  - language: r
+    registry: github
+    name: qcthat
+    url: https://github.com/Gilead-Public/qcthat
+    install: remotes::install_github("Gilead-Public/qcthat")
+    official: true
+    sdk: false
+    version: 1.1.3
+    published: '2026-06-17'
+    license: Apache-2.0
+    description: Quality control framework for R packages used in clinical trials.
+  - language: r
+    registry: github
+    name: workr
+    url: https://github.com/Gilead-Public/workr
+    install: remotes::install_github("Gilead-Public/workr")
+    official: true
+    sdk: false
+    version: 1.1.0
+    published: null
+    license: NOASSERTION
+    description: >-
+      Simple workflows in R. Version 1.1.0 read from DESCRIPTION on main; the repo publishes no
+      GitHub release or tag, so no publication date could be established — checked, nothing to record.
+  - language: r
+    registry: github
+    name: gsm.app
+    url: https://github.com/Gilead-BioStats/gsm.app
+    install: remotes::install_github("Gilead-BioStats/gsm.app")
+    official: true
+    sdk: false
+    version: 2.6.1
+    published: '2025-09-24'
+    license: Apache-2.0
+    docs: https://gilead-biostats.github.io/gsm.app/
+    description: Shiny application with drill-down for gsm assessments.
+  - language: r
+    registry: github
+    name: gsm.qc
+    url: https://github.com/Gilead-BioStats/gsm.qc
+    install: remotes::install_github("Gilead-BioStats/gsm.qc")
+    official: true
+    sdk: false
+    version: 1.1.1
+    published: '2025-09-18'
+    license: Apache-2.0
+    description: Quality control tests and documentation for the gsm suite.
+  - language: r
+    registry: github
+    name: clindata
+    url: https://github.com/Gilead-BioStats/clindata
+    install: remotes::install_github("Gilead-BioStats/clindata")
+    official: true
+    sdk: false
+    version: 1.0.5
+    published: '2024-02-13'
+    license: Apache-2.0
+    docs: https://gilead-biostats.github.io/clindata/
+    description: >-
+      Synthetic clinical data for testing and development. Last release 2024-02-13 — the oldest
+      release in the estate and the only package whose release cadence has visibly stalled.
+  - language: r
+    registry: github
+    name: gh.dash
+    url: https://github.com/Gilead-BioStats/gh.dash
+    install: remotes::install_github("Gilead-BioStats/gh.dash")
+    official: true
+    sdk: false
+    version: 1.1.0
+    published: '2026-08-14'
+    license: Apache-2.0
+    description: Dashboards for tracking GitHub releases and milestones.
