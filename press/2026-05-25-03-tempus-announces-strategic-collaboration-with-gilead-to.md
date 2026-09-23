@@ -1,7 +1,9 @@
 ---
 title: Tempus Announces Strategic Collaboration with Gilead to ...
 url: https://investors.tempus.com/news-releases/news-release-details/tempus-announces-strategic-collaboration-gilead-advance-oncology
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Gilead Sciences" press release artificial intelligence'
 position: 3
 source: serpapi-google

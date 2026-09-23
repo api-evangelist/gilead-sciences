@@ -1,7 +1,9 @@
 ---
 title: Artificial Intelligence at Gilead Sciences - Two Use Cases
 url: https://emerj.com/artificial-intelligence-at-gilead-sciences-two-use-cases/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Gilead Sciences" press release artificial intelligence'
 position: 2
 source: serpapi-google
