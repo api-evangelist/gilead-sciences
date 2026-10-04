@@ -38,7 +38,7 @@ tags:
   - Healthcare
   - Life Sciences
   - Clinical Trials
-  - Open-Source
+  - Open Source
   - Fortune 500
 tags_raw:
   - Pharmaceuticals
@@ -48,6 +48,7 @@ tags_raw:
   - Clinical Trials
   - Open Source
   - Fortune 500
+  - Open-Source
 url: >-
   https://raw.githubusercontent.com/api-evangelist/gilead-sciences/refs/heads/main/apis.yml
 specificationVersion: '0.23'
