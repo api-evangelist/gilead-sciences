@@ -28,3 +28,144 @@
     detected: '2026-10-20'
   status: not-a-workflow
   arazzo: null
+- slug: gilead-sciences-fda-drugs-fda-approved-drug-and-biologic-applications
+  label: FDA Drugs@FDA (approved drug and biologic applications)
+  partner_name: FDA Drugs@FDA (approved drug and biologic applications)
+  category: FDA drug / biologic application holder
+  type: contract
+  channel: regulator-register
+  evidence: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208351
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Drugs@FDA (openFDA drug/drugsfda; application holder = sponsor_name)
+    standard: FDA drug / biologic marketing application (21 CFR 314 / 601)
+    spec_file: null
+    role: fda-application-holder
+    registered_name: GILEAD SCIENCES
+    matched_domain: gilead.com
+    matched_by: domain
+    certified_products:
+    - product: Biologics License Application (approved) (Drugs@FDA)
+      product_type: BLA
+      lapsed: false
+      products_sample:
+      - HEPCLUDEX
+    - product: New Drug Application (approved) (Drugs@FDA)
+      product_type: NDA
+      lapsed: false
+      products_sample:
+      - ATRIPLA
+      - BIKTARVY
+      - BIXLENVO
+      - BIXLENVO SUNLENCA STARTER PACK (COPACKAGED)
+      - COMPLERA
+      - DESCOVY
+    applications_sample:
+    - BLA761468
+    - NDA021356
+    - NDA022577
+    - NDA202123
+    - NDA203100
+    signal_note: certified_products = one entry per application TYPE (NDA / ANDA / BLA), never per application;
+      lapsed when every product under the type is Discontinued. Applications are context, never counted
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+    identity: wikidata Q663596 'Gilead Sciences' P856 https://www.gilead.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+    other_registrations:
+    - GILEAD SCIENCES INC
+  status: not-a-workflow
+  arazzo: null
+- slug: gilead-sciences-clinicaltrials-gov-industry-trial-sponsors-and-collaborators
+  label: ClinicalTrials.gov (industry trial sponsors and collaborators)
+  partner_name: ClinicalTrials.gov (industry trial sponsors and collaborators)
+  category: Interventional trial sponsor / collaborator
+  type: register
+  channel: standard-directory
+  evidence: https://clinicaltrials.gov/study/NCT07560046
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: ClinicalTrials.gov API v2 (interventional, started >= 2021-01-01, industry lead sponsor or collaborator)
+    standard: null
+    spec_file: null
+    role: trial-collaborator+lead-sponsor
+    registered_name: Gilead Sciences
+    matched_domain: gilead.com
+    matched_by: domain
+    lead_sponsor: true
+    active_trial: true
+    latest_start: '2027-01-20'
+    trials_sample:
+    - NCT07560046
+    - NCT07806773
+    - NCT06525389
+    - NCT07530263
+    - NCT07841977
+    signal_note: 'PARTICIPATION only (a trial is not an approval): lead_sponsor, active_trial and latest_start are
+      per-edge signals; the number of trials is never counted'
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+    identity: wikidata Q663596 'Gilead Sciences' P856 https://www.gilead.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
+- slug: gilead-sciences-eu-ctis-clinical-trial-sponsors
+  label: EU CTIS (clinical trial sponsors)
+  partner_name: EU CTIS (clinical trial sponsors)
+  category: EU clinical trial sponsor
+  type: register
+  channel: standard-directory
+  evidence: https://euclinicaltrials.eu/ctis-public/view/2026-526026-40-00
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: EU Clinical Trials Information System public search (euclinicaltrials.eu, sponsorType 'Pharmaceutical
+      company')
+    standard: null
+    spec_file: null
+    role: eu-trial-sponsor
+    registered_name: Gilead Sciences Inc.
+    matched_domain: gilead.com
+    matched_by: domain
+    trials_sample:
+    - 2026-526026-40-00
+    - 2026-526264-20-00
+    - 2025-524336-19-00
+    - 2025-524335-39-00
+    - 2025-524095-27-00
+    signal_note: 'PARTICIPATION only: a CTIS sponsor listing; the number of trials is never counted'
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+    identity: wikidata Q663596 'Gilead Sciences' P856 https://www.gilead.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
+- slug: gilead-sciences-cdisc-members
+  label: CDISC (members)
+  partner: cdisc
+  partner_name: CDISC (members)
+  category: Clinical data standards member
+  type: register
+  channel: standard-directory
+  evidence: https://www.cdisc.org/company/gilead-sciences
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: CDISC member search (cdisc.org/members/search + public company page website)
+    standard: CDISC clinical data standards (SDTM / ADaM / CDASH / ODM)
+    spec_file: null
+    role: cdisc-member
+    registered_name: Gilead Sciences
+    register_id: gilead-sciences
+    member_industry: Pharmaceutical
+    listed_website: http://www.gilead.com/wt/home
+    matched_domain: gilead.com
+    matched_by: domain
+    signal_note: 'self-filed paid membership: listing alone = standard-participant (standards adopter); partner_tier
+      is the membership level, never weighted as a tier; hand-reviewed'
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
