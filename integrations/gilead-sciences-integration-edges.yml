@@ -165,6 +165,49 @@ edges:
     detected: '2026-10-21'
   detected_by: sweep-clinical-trial-sponsors.py
   first_seen: '2026-10-21'
+- partner_name: EMA (EU centrally authorised medicines)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.ema.europa.eu/en/medicines/human/EPAR/eviplera
+  category: EU centrally authorised medicine
+  contract_reference:
+    register: EMA medicines report (centrally authorised medicines; CHMP / CVMP opinion, EC decision)
+    standard: EU centralised marketing authorisation (Regulation (EC) 726/2004)
+    role: eu-marketing-authorisation-holder
+    categories:
+    - Human
+    statuses:
+    - Authorised
+    - Withdrawn
+    spec_file: null
+    registered_name: Gilead Sciences International Ltd
+    matched_domain: gilead.com
+    matched_by: domain
+    current_authorisation: true
+    signal_note: certified_products = one entry per product TYPE, never per product, only from products granted
+      an MA; lapsed when every granted product of the type is withdrawn / expired / revoked / lapsed. Advanced-therapy
+      rows are read by cell-gene-therapy and not repeated here. Products are context, never counted
+    detected_by: sweep-eu-ema-medicines.py
+    detected: '2026-10-22'
+    certified_products:
+    - product: human medicine (other) (EU centralised marketing authorisation)
+      product_type: human medicine (other)
+      standard: EU centralised marketing authorisation (Regulation (EC) 726/2004)
+      lapsed: false
+      products_sample:
+      - Eviplera (emtricitabine;rilpivirine;tenofovir disoproxil)
+      - Vistide (cidofovir)
+      - Vitekta (elvitegravir)
+    identity: wikidata Q663596 'Gilead Sciences' P856 https://www.gilead.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+    other_registrations:
+    - Gilead Sciences International Limited
+  detected_by: sweep-eu-ema-medicines.py
+  first_seen: '2026-10-22'
 generated: '2026-10-20'
 method: searched
 source:
@@ -180,3 +223,6 @@ checked:
 - https://api.fda.gov/drug/drugsfda.json
 - https://euclinicaltrials.eu/ctis-public/search
 - https://www.cdisc.org/members/search
+- https://spor.ema.europa.eu/omswi/
+- https://www.ema.europa.eu/en/human-regulatory-overview/research-development/data-medicines-iso-idmp-standards-overview
+- https://www.ema.europa.eu/en/medicines/download-medicine-data
